@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>MyPro Shopping</span>
+        <span class="spacer"></span>
+        <button *ngIf="!isLoggedIn" mat-stroked-button (click)="login()">Login</button>
+        <button *ngIf="isLoggedIn" mat-stroked-button (click)="logout()">Logout</button>
+    </mat-toolbar-row>
+</mat-toolbar>
