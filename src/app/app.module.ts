@@ -40,6 +40,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { SignoutCallbackComponent } from './features/home/signout-callback.component';
+import { CatalogComponent } from './features/catalog.component';
+import { CategoryComponent } from './features/browse/components/category/category.component';
+import { CartItemComponent } from './features/cart/components/cart-item/cart-item.component';
+import { CartListComponent } from './features/cart/components/cart-list/cart-list.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,11 @@ import { SignoutCallbackComponent } from './features/home/signout-callback.compo
     HeaderComponent,
     FooterComponent,
     SigninCallbackComponent,
-    SignoutCallbackComponent
+    SignoutCallbackComponent,
+    CatalogComponent,
+    CategoryComponent,
+    CartItemComponent,
+    CartListComponent
   ],
   imports: [
     BrowserModule,
