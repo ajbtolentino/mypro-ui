@@ -1,0 +1,35 @@
+.container {
+    max-width: 1260px;
+    justify-content: center;
+    margin: -60px auto 0;
+    background-color: transparent;
+}
+
+.mat-drawer-side {
+    border-right: none;
+}
+
+.mat-sidenav-container {
+    background-color: transparent;
+}
+
+mat-sidenav {
+    width: 300px;
+    background-color: transparent;
+
+    mat-card {
+        height: 100px;
+        
+    }
+}
+
+mat-sidenav-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    mat-card {
+        max-width: 400px;
+        margin: 10px;
+    }
+}

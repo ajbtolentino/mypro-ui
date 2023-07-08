@@ -40,6 +40,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { SignoutCallbackComponent } from './features/home/signout-callback.component';
+import { CartComponent } from './features/cart/cart.component';
+import { CatalogComponent } from './features/catalog/catalog.component';
+import { PaymentComponent } from './features/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,9 @@ import { SignoutCallbackComponent } from './features/home/signout-callback.compo
     FooterComponent,
     SigninCallbackComponent,
     SignoutCallbackComponent,
+    CartComponent,
+    CatalogComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

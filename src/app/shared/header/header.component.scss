@@ -1,3 +1,54 @@
-.spacer {
-    flex: 1 1 auto;
+.header {
+    display: flex;
+    margin: 10px auto;
+    flex-grow: 1;
+    justify-content: space-between;
+    max-width: 1260px;
+
+    .header-search {
+        display: flex;
+        flex-grow: 1;
+        margin: auto 20px;
+
+        mat-form-field {
+            display: flex;
+            flex-grow: 1;
+        }
+    }
+    
+    .header-item {
+        display: flex;
+    }
+
+    .header-buttons {
+        display: flex; 
+        align-items: center;
+    
+        button {
+            margin: auto 5px;
+        }
+    }
+}
+
+.breadcrumb-title {
+    display: flex;
+    height: 150px;
+    background-color: rgb(55, 63, 80);
+
+    .container {
+        color: white;
+        display: flex;
+        margin: 10px auto 60px;
+        flex-grow: 1;
+        justify-content: space-between;
+        max-width: 1260px;
+
+        .title {
+            display: flex;
+        }
+    
+        .breadcrumb {
+            display: flex;
+        }   
+    }
 }
