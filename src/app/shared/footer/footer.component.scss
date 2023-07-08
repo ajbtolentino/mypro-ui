@@ -1,6 +1,9 @@
 mat-toolbar{
+    display: flex;
+    align-self: flex-end;
     background-color: rgb(55, 63, 80);
 }
+
 mat-toolbar-row {
     display: flex;
     margin: 10px auto;

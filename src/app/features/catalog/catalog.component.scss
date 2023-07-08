@@ -19,17 +19,16 @@ mat-sidenav {
 
     mat-card {
         height: 100px;
-        
     }
 }
 
 mat-sidenav-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     
     mat-card {
-        max-width: 400px;
+        display: flex;
         margin: 10px;
+        flex-shrink: 0;
     }
 }
