@@ -1,49 +1,120 @@
 .container {
     max-width: 1260px;
     justify-content: center;
-    margin: -60px auto 0;
+    margin: -70px auto 0;
     background-color: transparent;
-}
+    overflow: visible;
 
-.mat-drawer-side {
-    border-right: none;
-}
+    mat-sidenav-container {
+        background-color: transparent;
+        overflow: visible;
 
-.mat-sidenav-container {
-    background-color: transparent;
-}
-
-mat-sidenav {
-    width: 350px;
-    background-color: transparent;
-
-    mat-card {
-        height: 100px;
-    }
-}
-
-mat-sidenav-content {
-    display: flex;
-    justify-content: flex-end;
-
-    div {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 40px;
-        
-        mat-card {
-            width: 250px;
-            display: flex;
-            margin: 20px;
-            flex-shrink: 0;
+        .mat-drawer-side {
+            border-right: none;
+        }
     
-            mat-card-header {
-                justify-content: space-between;
+        mat-sidenav {
+            width: 350px;
+            background-color: transparent;
+
+            mat-card {
+                height: 100px;
+                box-shadow: 0 .3rem 1.525rem -.375rem #0000001a!important;
             }
-    
-            mat-card-actions {
-                justify-content: space-between;
+        }
+        
+        mat-sidenav-content {
+            display: flex;
+            justify-content: left;
+            flex-wrap: wrap;
+            padding-left: 40px;
+            overflow: visible;
+
+            mat-card {
+                display: flex;
+                margin-left: 40px;
+                margin-bottom: 40px;
+                width: 250px;
+                box-shadow: none;
+                transition: all .3s;
+
+                img {
+                    background-color: wheat;
+                }
+
+                mat-card-header {
+                    padding: 5px;
+                    flex-direction: column;
+   
+                    .name {
+                        font-size: 17px;
+                        height: 20px;
+                    }
+
+                    .category {
+                        color: rgba(0, 0, 0, 0.54);
+                        font-size: 14px;
+                        height: 30px;
+                    }
+
+                    .price-rating {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .rating {
+                            display: flex;
+        
+                            mat-icon {
+                                width: 15px;
+                                font-size: 15px;
+                                color: #fea569;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+        
+                mat-card-actions {
+                    justify-content: flex-end;
+                    
+                    button {
+                        display: flex;
+                        width: fit-content;
+                        .add-to-cart {
+                            display: none;
+                        }
+
+                        mat-icon {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            mat-card:hover {
+                box-shadow: .2rem -.2rem 1.6rem .5rem #0000022a!important;
+                transform: scale(1.1);
+
+                mat-card-actions {
+                    button {
+                        .add-to-cart {
+                            display: block;
+                        }
+
+                        mat-icon {
+                            margin-left: -4px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+@keyframes slideaway {
+    to { display: block; }
+    from { transform: translateY(40px); opacity: 0; display: none;}
+  }

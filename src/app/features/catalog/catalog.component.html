@@ -1,104 +1,43 @@
 <div class="container">
     <mat-sidenav-container>
         <mat-sidenav mode="side" opened>
-            <mat-card class="example-card">
+            <mat-card>
                 <mat-card-content>
                     Filter
                 </mat-card-content>
             </mat-card>
         </mat-sidenav>
         <mat-sidenav-content>
-            <div>
-            <mat-card>
+            <mat-card *ngFor="let product of products">
+                <img mat-card-image src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-realistic-low-sodium-chips-product-sample-png-image_5067593.jpg" >
+                <button mat-icon-button color="warn" style="position: absolute; right: 0;">
+                    <mat-icon>favorite</mat-icon>
+                </button>
                 <mat-card-header>
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Category</mat-card-subtitle>
-                    <button mat-mini-fab>
-                        <mat-icon>favorite</mat-icon>
-                      </button>
+                    <mat-card-title style="overflow: hidden;">
+                        <div class="name">Shiba Inu {{product.name}}</div>
+                        <div class="category">Category</div>
+                    </mat-card-title>
+                    <mat-card-subtitle class="price-rating">
+                        <div class="price">
+                            $1.00
+                        </div>
+                        <div class="rating">
+                            <mat-icon>star</mat-icon>
+                            <mat-icon>star</mat-icon>
+                            <mat-icon>star</mat-icon>
+                            <mat-icon>star</mat-icon>
+                            <mat-icon>star_border</mat-icon>
+                        </div>
+                    </mat-card-subtitle>
                 </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                <mat-card-content>
-                      Test asd asd asd asd as das 
-                </mat-card-content>
                 <mat-card-actions>
-                    <span>$1.00</span>
-                    <button mat-stroked-button color="warn"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
+                    <button mat-stroked-button color="warn">
+                        <mat-icon>add_shopping_cart</mat-icon>
+                        <span class="add-to-cart">Add to cart</span>
+                    </button>
                 </mat-card-actions>
             </mat-card>
-
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Category</mat-card-subtitle>
-                    <button mat-icon-button color="warn">
-                        <mat-icon>favorite</mat-icon>
-                      </button>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                <mat-card-content>
-                      Test asd asd asd asd as das 
-                </mat-card-content>
-                <mat-card-actions>
-                    <span>$1.00</span>
-                    <button mat-stroked-button color="warn"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Category</mat-card-subtitle>
-                    <button mat-icon-button>
-                        <mat-icon>favorite</mat-icon>
-                      </button>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                <mat-card-content>
-                      Test asd asd asd asd as das 
-                </mat-card-content>
-                <mat-card-actions>
-                    <span>$1.00</span>
-                    <button mat-stroked-button color="warn"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Category</mat-card-subtitle>
-                    <button mat-icon-button>
-                        <mat-icon>favorite</mat-icon>
-                      </button>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                <mat-card-content>
-                      Test asd asd asd asd as das 
-                </mat-card-content>
-                <mat-card-actions>
-                    <span>$1.00</span>
-                    <button mat-stroked-button color="warn"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Category</mat-card-subtitle>
-                    <button mat-icon-button>
-                        <mat-icon>favorite</mat-icon>
-                      </button>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-                <mat-card-content>
-                      Test asd asd asd asd as das 
-                </mat-card-content>
-                <mat-card-actions>
-                    <span>$1.00</span>
-                    <button mat-stroked-button color="warn"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
-                </mat-card-actions>
-            </mat-card>
-            </div>
         </mat-sidenav-content>
       </mat-sidenav-container>
 </div>
