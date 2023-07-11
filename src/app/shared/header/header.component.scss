@@ -3,7 +3,7 @@
     margin: 10px auto;
     flex-grow: 1;
     justify-content: space-between;
-    max-width: 1260px;
+    max-width: 1600px;
 
     .header-search {
         display: flex;
@@ -13,6 +13,12 @@
         mat-form-field {
             display: flex;
             flex-grow: 1;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .header-search {
+            display: none;
         }
     }
     
@@ -31,17 +37,18 @@
 }
 
 .breadcrumb-title {
-    display: flex;
     height: 150px;
+    flex-grow: 1;
+    margin-bottom: -50px;
     background-color: rgb(55, 63, 80);
 
     .container {
-        color: white;
         display: flex;
-        margin: 10px auto 60px;
+        max-width: 1600px;
         flex-grow: 1;
+        color: white;
+        margin: 10px auto 60px;
         justify-content: space-between;
-        max-width: 1260px;
 
         .title {
             display: flex;
